@@ -16,7 +16,7 @@ class App extends React.Component {
     console.log('clicked');
     axios.post('/welcome', {test: this.state.text})
     .then((success) => {
-
+      console.log('great success!')
     })
     .catch((error) => {
       console.alert('Failed to post new data with error : ' + error);

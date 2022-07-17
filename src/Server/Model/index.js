@@ -3,13 +3,14 @@ const {Information} = require('../../DB/schema.js');
 
 const postWelcome = async (params) => {
   console.log('made it to models with data: ', params)
-  // try {
-  //   await db.collection('masonData').insertOne({
-  //     test: params.test,
-  //   })
-  // } catch (error) {
-  //   return error;
-  // }
+  const filter = {test: params.test};
+  const update = {text: params.test};
+  const options = {upsert: true};
+  try {
+    await Information.findOneAndUpdate(filter, update, options)
+  } catch (error) {
+    return error;
+  }
 }
 
 module.exports = {

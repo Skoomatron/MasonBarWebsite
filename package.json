@@ -9,10 +9,12 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development --watch",
-    "build-prod": "webpack --mode production"
+    "build-prod": "webpack --mode production",
+    "server": "nodemon src/Server/index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
+    "mongoose": "^6.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -1,17 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Welcome from "./Components/Welcome.jsx";
+import Welcome from "./Components/Welcome/Welcome.jsx";
 import axios from 'axios';
 import logo from '../Assets/TheMasonBar_Logo3.svg';
-import Navigation from './Components/Navigation.jsx';
-import Menu from './Components/Menu.jsx';
-import Events from './Components/Events.jsx';
+import Navigation from './Components/Navigation/Navigation.jsx';
+import Menu from './Components/Menu/Menu.jsx';
+import Events from './Components/Events/Events.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       text: 'this is test data',
+      images: ['dummy data', 'dummy data 2'],
     }
     this.clickHandler = this.clickHandler.bind(this);
   }
@@ -30,10 +31,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <img class="logo" src={logo} alt="Mason Bar Logo"></img>
+        <img className="logo" src={logo} alt="Mason Bar Logo"></img>
         <h1>Welcome</h1>
         <Navigation/>
-        <Welcome clickHandler={this.clickHandler}/>
+        <Welcome clickHandler={this.clickHandler} state={this.state}/>
         <Events/>
       </div>
 

@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: skyblue;
 }
 
 h1 {
@@ -14,4 +14,11 @@ h1 {
   height: 300px;
   width: 100vw;
   background-color: blue;
+}
+
+.carousel {
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  right: 50%;
 }

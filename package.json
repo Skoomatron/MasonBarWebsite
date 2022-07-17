@@ -16,8 +16,12 @@
     "axios": "^0.27.2",
     "components": "^0.1.0",
     "dotenv": "^16.0.1",
+    "i": "^0.3.7",
+    "moment": "^2.29.4",
     "mongoose": "^6.4.4",
-    "react": "^18.2.0",
+    "npm": "^8.14.0",
+    "react-big-calendar": "^1.4.2",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "styled": "^1.0.0"
   },

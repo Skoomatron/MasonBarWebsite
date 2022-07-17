@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-const mongooseURL = `mongodb+srv://${USERNAME}:<${PASSWORD}>@cluster0.xvzq7cx.mongodb.net/?retryWrites=true&w=majority`;
 
 PASSWORD = process.env.DBPASSWORD;
 USERNAME = process.env.USERNAME;
+
+const mongooseURL = `mongodb+srv://${USERNAME}:<${PASSWORD}>@cluster0.xvzq7cx.mongodb.net/?retryWrites=true&w=majority`;
 
 const db = mongoose.connect(mongooseURL, { useNewUrlParser: true, useUnifiedTopology: true });
 

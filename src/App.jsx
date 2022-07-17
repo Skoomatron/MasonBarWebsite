@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Welcome from "./Components/Welcome.jsx";
 import axios from 'axios';
+import logo from '../Assets/TheMasonBar_Logo3.svg';
+import Navigation from './Components/Navigation.jsx';
+import Menu from './Components/Menu.jsx';
+import Events from './Components/Events.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,8 +30,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Mason Bar</h1>
+        <img class="logo" src={logo} alt="Mason Bar Logo"></img>
+        <h1>Welcome</h1>
+        <Navigation/>
         <Welcome clickHandler={this.clickHandler}/>
+        <Events/>
       </div>
 
     );

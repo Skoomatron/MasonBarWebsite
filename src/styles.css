@@ -1,4 +1,17 @@
+body {
+  background-color: black;
+}
+
 h1 {
   color: white;
   background-color: black;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.logo {
+  height: 300px;
+  width: 100vw;
+  background-color: blue;
 }

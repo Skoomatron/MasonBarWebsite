@@ -1,46 +1,62 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import Slider from 'react-slick'
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
+import {useState} from 'react'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 const MainCarousel = (props) => {
 
+  const [sliderRef, setSliderRef] = useState(null)
+
+
+  const sliderSettings = {
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+  }
+
+  const hotelCards = [
+    {
+      title: 'card one',
+      imageSrc: "https://drive.google.com/uc?export=view&id=1Ezb8eZ4yiH_c_P_wf6e-m2uYUyNZpRfr",
+      description: 'poopy pants',
+    },
+    {
+      title: 'card one',
+      imageSrc: "https://drive.google.com/uc?export=view&id=1-G39xZwoKkIEYw28t0DYyefJEkYPHBNr",
+      description: 'poopy pants',
+    },
+    {
+      title: 'card one',
+      imageSrc: "https://drive.google.com/uc?export=view&id=1edmqcUSAqGmL19hhtI09-Lpde__ZwjOg",
+      description: 'poopy pants',
+    }
+  ]
+
   return (
-    <Carousel fade>
-      <p>At the Mason Bar there is nothing but good times!</p>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://drive.google.com/uc?export=view&id=1Ezb8eZ4yiH_c_P_wf6e-m2uYUyNZpRfr"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>Live Music!</h3>
-          <p>Text Placeholder</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://drive.google.com/uc?export=view&id=1-G39xZwoKkIEYw28t0DYyefJEkYPHBNr"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Great People!</h3>
-          <p>Text Placeholder</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://drive.google.com/uc?export=view&id=1edmqcUSAqGmL19hhtI09-Lpde__ZwjOg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Great Drinks!</h3>
-          <p>Text Placeholder</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className='content'>
+        <button onClick={sliderRef?.slickPrev}>
+          <FaChevronLeft />
+        </button>
+        <button onClick={sliderRef?.slickNext}>
+          <FaChevronRight />
+        </button>
+      <Slider ref={setSliderRef} {...sliderSettings}>
+        {hotelCards.map((card, index) => (
+          <div key={index}>
+            <h2>{card.title}</h2>
+            <img alt={card.title} src={card.imageSrc} width="100" height="100" />
+            <p>{card.description}</p>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import MasonCalendar from './Calendar.jsx';
 
-const Events = () => {
+const Events = (props) => {
 
   return (
-    <div>Events Placeholder
-      <MasonCalendar/>
+    <div>
+      <MasonCalendar state={props.state} selectable={props.selectable}/>
     </div>
   )
 }

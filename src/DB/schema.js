@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
-const masonData = new mongoose.Schema({
-  test: String,
+const masonEvents = new mongoose.Schema({
+  day: String,
+  month: String,
+  start: String,
+  end: String,
+  eventTitle: String,
+  eventDescription: String,
 })
 
+const Event = mongoose.model('Event', masonEvents);
 
-const Information = mongoose.model('Information', masonData);
-
-module.exports = {Information}
+module.exports = {Event}

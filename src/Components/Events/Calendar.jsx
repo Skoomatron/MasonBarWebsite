@@ -6,29 +6,38 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
-const MasonCalendar = () => {
+const DateParser = (array, props) => {
+  const events = [];
+  array.forEach((event, index) => {
 
-  const myEventsList = [
-    {
-      start: new Date(),
-      end: new Date(),
-      title: "This is a sample event"
-    },
-    {
-      start: '07/21/2022',
-      end: '07/21/2022',
-      title: "Festivities Start at 11:00am"
-    }
-];
+    let temp = {};
+    let numMonth = moment().month(event.month).format("M");
+    let currentYear = moment().year();
+    let parsedDate = numMonth + '/' + event.day + '/' + currentYear;
+
+    temp.start = parsedDate;
+    temp.end = parsedDate;
+    temp.title = event.eventTitle;
+
+    events.push(temp);
+  })
+  return events;
+}
+
+const MasonCalendar = (props) => {
+
+  const events = DateParser(props.state.events, props);
 
   return (
-    <div class="calendar-container">
+    <div className="calendar-container">
     <Calendar
       defaultDate={moment().toDate()}
       defaultView="month"
       localizer={localizer}
-      events={myEventsList}
+      events={events}
       resizable
+      selectable
+      onSelectEvent={props.selectable}
       startAccessor="start"
       endAccessor="end"
       style={{ height: 500 }}

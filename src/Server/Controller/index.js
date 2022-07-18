@@ -1,10 +1,10 @@
 const model = require('../Model/index.js');
 
-const welcomePost = (req, res) => {
-  console.log('made it to router with data: ', req.body);
-  model.postWelcome(req.body)
+const getEvents = (req, res) => {
+  model.retrieveEvents()
   .then((success) => {
-    res.status(201).send();
+    console.log(success, 'success in controller')
+    res.status(201).send(success);
   })
   .catch((error) => {
     res.status(409).send(error);
@@ -12,5 +12,5 @@ const welcomePost = (req, res) => {
 }
 
 module.exports = {
-  welcomePost,
+  getEvents,
 }

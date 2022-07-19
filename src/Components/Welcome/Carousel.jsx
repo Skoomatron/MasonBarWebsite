@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 const MainCarousel = (props) => {
 
-  const [sliderRef, setSliderRef] = useState(null)
+  const [sliderRef, setSliderRef] = useState(null);
 
   const sliderSettings = {
     arrows: false,
@@ -17,7 +17,7 @@ const MainCarousel = (props) => {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    fade: true,
+    // fade: true,
   }
 
   return (

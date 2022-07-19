@@ -16,7 +16,12 @@ const masonImages = new mongoose.Schema({
   photoCaption: String,
 })
 
-const Event = mongoose.model('Event', masonEvents);
-const WelcomeImage = mongoose.model('WelcomeImage', masonImages)
+const masonWelcome = new mongoose.Schema({
+  welcomeMessage: String,
+})
 
-module.exports = {Event, WelcomeImage}
+const Event = mongoose.model('Event', masonEvents);
+const WelcomeImage = mongoose.model('WelcomeImage', masonImages);
+const Welcome = mongoose.model('Welcome', masonWelcome);
+
+module.exports = {Event, WelcomeImage, Welcome}

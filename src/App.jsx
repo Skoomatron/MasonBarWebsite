@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       text: 'this is test data',
-      images: ['dummy data', 'dummy data 2'],
+      images: [],
       events: [],
       showModal: false,
       day: '',
@@ -24,6 +24,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getEvents();
+    this.getImages();
   }
 
   async filterEvents(string) {
@@ -46,11 +47,20 @@ class App extends React.Component {
   }
 
 
-  getEvents() {
-    axios.get('/events')
+  async getEvents() {
+    await axios.get('/events')
     .then((success) => {
-      console.log(success)
       this.setState({events: success.data})
+    })
+    .catch((error) => {
+      console.log('there was an error getting events with ', error)
+    })
+  }
+
+  async getImages() {
+    await axios.get('images')
+    .then((success) => {
+      this.setState({images: success.data})
     })
     .catch((error) => {
       console.log('there was an error getting events with ', error)
@@ -61,9 +71,6 @@ class App extends React.Component {
     return (
       <div>
         <img className="logo" src={logo} alt="Mason Bar Logo"></img>
-        <h1>Welcome</h1>
-        {/* <Welcome filterEvents={this.filterEvents} state={this.state}/> */}
-        {/* <Events state={this.state} selectable={this.selectEvent}/> */}
         <Container state={this.state} selectable={this.selectEvent} selectable={this.selectEvent}/>
       </div>
 

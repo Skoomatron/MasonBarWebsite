@@ -15,7 +15,7 @@ const Container = (props) => {
         fill
       >
         <Tab eventKey="welcome" title="Welcome">
-          <Welcome/>
+          <Welcome className="content" state={props.state}/>
         </Tab>
         <Tab eventKey="event" title="Upcoming Events">
           <Events

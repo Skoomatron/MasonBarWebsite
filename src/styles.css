@@ -1,7 +1,8 @@
 /* Main Styling */
 
 body {
-  background-color: skyblue;
+  background-color: black;
+  font-family: Monospace !important;
 }
 
 h1 {
@@ -14,21 +15,101 @@ h1 {
 /* General Styling */
 
 .logo {
-  height: 300px;
+  height: 30vh;
   width: 100vw;
-  background-color: blue;
+  background-color: black;
+}
+
+.mb-3 {
+  height: 10%;
+  font-size: 2vh;
+  border: solid 5px black;
+  background-color: black;
 }
 /* Carousel Styling */
 
-.content {
-  width: 40vh;
-  height: 40vh;
-  left: 40%;
-  right: 40%;
+.carouselContainer {
+  background-color: white;
+}
+
+.carouselImage {
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  border: solid 10px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.imageCaption {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+  margin: 0 auto;
+  background-size: cover;
 }
 
 /* Calendar Styling */
 
-.calendar-container {
-  margin: 25px;
+.rbc-calendar {
+  margin: 0 auto;
+  height: 90% !important;
+  width: 60% !important;
+  font-size: 2vh !important;
 }
+
+.rbc-header {
+  height: 5% !important;
+  font-size: 40% !important;
+}
+
+.rbc-toolbar {
+  height: 10% !important;
+}
+
+.rbc-toolbar-label {
+  font-size: 5vh !important;
+}
+
+button.rbc-btn {
+  height: 100% !important;
+}
+
+.calendarContainer {
+  width: 100%;
+}
+
+.rbc-date-cell {
+  height: 30% !important;
+}
+
+/* Modal Styling */
+
+.modal-content {
+  height: 90vh !important;
+  width: 90vh !important;
+  font-size: 4vh !important;
+}
+
+.modal-title.h4 {
+  font-size: 3vh;
+  align-content: center;
+}
+
+.btn.btn-secondary {
+  height: 10vh;
+  width: 100vh;
+  font-size: 4vh;
+}
+
+

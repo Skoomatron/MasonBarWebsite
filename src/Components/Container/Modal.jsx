@@ -12,7 +12,7 @@ const SharedModal = (props) => {
   const currentYear = moment().year();
 
   return (
-    <Modal show={props.state.showModal} onHide={props.selectable}>
+    <Modal dialogClassName="modalContainer" show={props.state.showModal} onHide={props.selectable}>
       <Modal.Header>
         <Modal.Title>Event Details</Modal.Title>
       </Modal.Header>

@@ -5,7 +5,7 @@ const Welcome = (props) => {
 
   return (
     <div>
-      <MainCarousel/>
+      <MainCarousel state={props.state}/>
     </div>
   )
 }

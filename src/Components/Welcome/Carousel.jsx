@@ -10,10 +10,9 @@ const MainCarousel = (props) => {
 
   const [sliderRef, setSliderRef] = useState(null)
 
-
   const sliderSettings = {
     arrows: false,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
@@ -21,38 +20,14 @@ const MainCarousel = (props) => {
     fade: true,
   }
 
-  const hotelCards = [
-    {
-      title: 'card one',
-      imageSrc: "https://drive.google.com/uc?export=view&id=1Ezb8eZ4yiH_c_P_wf6e-m2uYUyNZpRfr",
-      description: 'poopy pants',
-    },
-    {
-      title: 'card one',
-      imageSrc: "https://drive.google.com/uc?export=view&id=1-G39xZwoKkIEYw28t0DYyefJEkYPHBNr",
-      description: 'poopy pants',
-    },
-    {
-      title: 'card one',
-      imageSrc: "https://drive.google.com/uc?export=view&id=1edmqcUSAqGmL19hhtI09-Lpde__ZwjOg",
-      description: 'poopy pants',
-    }
-  ]
-
   return (
-    <div className='content'>
-        <button onClick={sliderRef?.slickPrev}>
-          <FaChevronLeft />
-        </button>
-        <button onClick={sliderRef?.slickNext}>
-          <FaChevronRight />
-        </button>
+    <div className="carouselContainer">
+
       <Slider ref={setSliderRef} {...sliderSettings}>
-        {hotelCards.map((card, index) => (
-          <div key={index}>
-            <h2>{card.title}</h2>
-            <img alt={card.title} src={card.imageSrc} width="100" height="100" />
-            <p>{card.description}</p>
+        {props.state.images.map((card, index) => (
+          <div  key={index}>
+            <p className="imageCaption">{card.photoCaption}</p>
+            <img className="carouselImage" src={card.photoURL} width="auto" height="auto" />
           </div>
         ))}
       </Slider>

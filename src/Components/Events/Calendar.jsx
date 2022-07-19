@@ -31,7 +31,7 @@ const MasonCalendar = (props) => {
   const events = DateParser(props.state.events, props);
 
   return (
-    <div className="calendar-container" style={{height: "500px"}}>
+    <div className="calendarContainer" style={{height: "90vh", width: "auto"}}>
     <SharedModal state={props.state} selectable={props.selectable}/>
     <Calendar
       defaultDate={moment().toDate()}

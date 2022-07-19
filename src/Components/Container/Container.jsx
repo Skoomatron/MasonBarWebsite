@@ -4,6 +4,7 @@ import React from 'react';
 import Events from '../Events/Events.jsx';
 import Welcome from '../Welcome/Welcome.jsx';
 import Menu from '../Menu/Menu.jsx';
+import Contact from '../Contact/Contact.jsx';
 
 const Container = (props) => {
 
@@ -24,6 +25,9 @@ const Container = (props) => {
         </Tab>
         <Tab eventKey="menu" title="Menu">
           <Menu />
+        </Tab>
+        <Tab eventKey="contact" title="Contact Us!">
+          <Contact />
         </Tab>
       </Tabs>
   )

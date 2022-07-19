@@ -5,7 +5,7 @@ const Welcome = (props) => {
 
   return (
     <div>
-      {/* <h2>{props.state</h2> */}
+      <h2 className="welcomeMessage">{props.state.welcome}</h2>
       <MainCarousel state={props.state}/>
     </div>
   )

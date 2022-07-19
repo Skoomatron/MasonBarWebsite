@@ -112,4 +112,22 @@ button.rbc-btn {
   font-size: 4vh;
 }
 
+/* Welcome Styles */
 
+.welcomeMessage {
+  text-align: center;
+}
+
+/* Contact Styles */
+
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}

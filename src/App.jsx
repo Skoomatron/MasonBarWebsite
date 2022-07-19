@@ -36,8 +36,11 @@ class App extends React.Component {
   }
 
   async selectEvent() {
+
     const clickedTitle = event.target.innerHTML;
-    this.filterEvents(clickedTitle);
+    if (clickedTitle !== 'Close') {
+      this.filterEvents(clickedTitle);
+    }
     this.setState({showModal: !this.state.showModal})
 
   }

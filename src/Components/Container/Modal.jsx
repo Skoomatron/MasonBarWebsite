@@ -9,7 +9,6 @@ import moment from 'moment';
 const SharedModal = (props) => {
 
   const selectedData = props.state.filtered;
-  console.log(selectedData[0])
   const currentYear = moment().year();
 
   return (
@@ -18,8 +17,6 @@ const SharedModal = (props) => {
         <Modal.Title>Event Details</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {console.log(props, 'prps') }
-        {console.log(selectedData, 'selected')}
         Event Title: {selectedData.eventTitle} <br></br>
         Event Date: {selectedData.month} {selectedData.day} {currentYear} <br></br>
         Event Start Time: {selectedData.start} <br></br>

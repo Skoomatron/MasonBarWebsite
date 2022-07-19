@@ -6,13 +6,6 @@ const Welcome = (props) => {
   return (
     <div>
       <MainCarousel/>
-      <button
-        onClick={() => {
-          props.clickHandler();
-        }}
-      >
-        Test Button
-      </button>
     </div>
   )
 }

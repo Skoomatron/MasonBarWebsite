@@ -31,21 +31,19 @@ const MasonCalendar = (props) => {
   const events = DateParser(props.state.events, props);
 
   return (
-    <div className="calendar-container">
+    <div className="calendar-container" style={{height: "500px"}}>
     <SharedModal state={props.state} selectable={props.selectable}/>
     <Calendar
       defaultDate={moment().toDate()}
       defaultView="month"
       localizer={localizer}
       events={events}
+      views
       resizable
-      // selectable
       onDoubleClickEvent={props.selectable}
-      // onSelectSlot={props.selectable}
-      // onSelectEvent={props.selectable}
       startAccessor="start"
       endAccessor="end"
-      style={{ height: 500 }}
+      style={{ height: "500px" }}
     />
   </div>
   )

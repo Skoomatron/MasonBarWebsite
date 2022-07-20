@@ -4,7 +4,7 @@ const Soups = (props) => {
 
   return (
     <div>
-    <h2>Soups</h2>
+    <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Soups</h2>
     {
       props.soups.map((item, index) => {
         return (

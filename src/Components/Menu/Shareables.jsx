@@ -4,7 +4,7 @@ const Shareables = (props) => {
 
   return (
     <div>
-    <h2>Shareables</h2>
+    <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Shareables</h2>
     {
       props.shareables.map((item, index) => {
         return (

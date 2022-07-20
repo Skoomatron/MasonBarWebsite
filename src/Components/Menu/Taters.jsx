@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Taters = (props) => {
-  console.log(props.taters)
   return (
     <div>
-      <h2>Taters</h2>
+      <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Taters</h2>
       {
         props.taters.map((item, index) => {
           return (

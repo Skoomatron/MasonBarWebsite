@@ -12,6 +12,17 @@ h1 {
   align-content: center;
   display: flex;
 }
+
+.footer {
+  position: fixed;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-content: center;
+}
 /* General Styling */
 
 .logo {
@@ -130,4 +141,9 @@ button.rbc-btn {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+.social {
+  height: 4vh;
+  width: 4vh;
 }

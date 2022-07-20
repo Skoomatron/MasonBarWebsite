@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../../Assets/TheMasonBar_Logo3.svg';
+import { FaFacebookSquare, FaInstagramSquare } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -21,6 +22,8 @@ const Contact = () => {
         46 Valley River Ave.
         <br></br>
         Murphy, NC 28906
+        <FaFacebookSquare className="social">Follow Us On Facebook</FaFacebookSquare>
+        <FaInstagramSquare className="social">Follow Us On Instagram</FaInstagramSquare>
       </div>
     </div>
   )

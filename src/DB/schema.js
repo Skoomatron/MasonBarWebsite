@@ -20,8 +20,16 @@ const masonWelcome = new mongoose.Schema({
   welcomeMessage: String,
 })
 
+const masonMenu = new mongoose.Schema({
+  category: String,
+  name: String,
+  description: String,
+  price: String,
+})
+
 const Event = mongoose.model('Event', masonEvents);
 const WelcomeImage = mongoose.model('WelcomeImage', masonImages);
 const Welcome = mongoose.model('Welcome', masonWelcome);
+const Menu = mongoose.model('Menu', masonMenu);
 
-module.exports = {Event, WelcomeImage, Welcome}
+module.exports = {Event, WelcomeImage, Welcome, Menu}

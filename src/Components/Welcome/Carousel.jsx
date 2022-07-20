@@ -12,12 +12,12 @@ const MainCarousel = (props) => {
 
   const sliderSettings = {
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    // fade: true,
+    fade: true,
   }
 
   return (

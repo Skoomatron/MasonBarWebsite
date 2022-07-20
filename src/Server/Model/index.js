@@ -1,5 +1,5 @@
 const db = require('../../DB/index.js');
-const {Event, WelcomeImage, Welcome} = require('../../DB/schema.js');
+const {Event, WelcomeImage, Welcome, Menu} = require('../../DB/schema.js');
 
 const retrieveEvents = async () => {
   try {
@@ -25,8 +25,17 @@ const retrieveWelcome = async () => {
   }
 }
 
+const retrieveMenu = async () => {
+  try {
+    return await Menu.find({});
+  } catch (error) {
+    return error;
+  }
+}
+
 module.exports = {
   retrieveEvents,
   retrieveImages,
   retrieveWelcome,
+  retrieveMenu
 }

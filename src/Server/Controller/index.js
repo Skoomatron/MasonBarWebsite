@@ -31,8 +31,20 @@ const getWelcome = (req, res) => {
   })
 }
 
+const getMenu = (req, res) => {
+  model.retrieveMenu()
+  .then((success) => {
+    console.log(success, 'success in controller')
+    res.status(201).send(success);
+  })
+  .catch((error) => {
+    res.status(409).send(error);
+  })
+}
+
 module.exports = {
   getEvents,
   getImages,
-  getWelcome
+  getWelcome,
+  getMenu
 }

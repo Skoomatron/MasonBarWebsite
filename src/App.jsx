@@ -13,6 +13,7 @@ class App extends React.Component {
     this.state = {
       images: [],
       events: [],
+      menu: [],
       welcome: '',
       showModal: false,
       day: '',
@@ -23,9 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getEvents();
-    this.getImages();
-    this.getWelcome();
+    this.getAllData();
   }
 
   filterEvents(string) {
@@ -49,31 +48,22 @@ class App extends React.Component {
 
   }
 
+  async getAllData() {
+    const promises = [
+      axios.get('/events'),
+      axios.get('/images'),
+      axios.get('/welcome'),
+      axios.get('/menu')
+    ]
 
-  async getEvents() {
-    await axios.get('/events')
+    await Promise.all(promises)
     .then((success) => {
-      this.setState({events: success.data})
-    })
-    .catch((error) => {
-      console.log('there was an error getting events with ', error)
-    })
-  }
-
-  async getImages() {
-    await axios.get('/images')
-    .then((success) => {
-      this.setState({images: success.data})
-    })
-    .catch((error) => {
-      console.log('there was an error getting events with ', error)
-    })
-  }
-
-  async getWelcome() {
-    await axios.get('/welcome')
-    .then((success) => {
-      this.setState({welcome: success.data[0].welcomeMessage})
+      this.setState({
+        events: success[0].data,
+        images: success[1].data,
+        welcome: success[2].data[0].welcomeMessage,
+        menu: success[3].data
+      })
     })
     .catch((error) => {
       console.log('there was an error getting events with ', error)
@@ -85,8 +75,8 @@ class App extends React.Component {
       <div>
         <img className="logo" src={logo} alt="Mason Bar Logo"></img>
         <Container state={this.state} selectable={this.selectEvent} selectable={this.selectEvent}/>
+        <footer className="footer">Authored by Trevor Edwards (Last Updated: July 18th, 2022)</footer>
       </div>
-
     );
   }
 }

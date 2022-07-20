@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import Welcome from "./Components/Welcome/Welcome.jsx";
 import axios from 'axios';
 import logo from '../Assets/TheMasonBar_Logo3.svg';
-import Navigation from './Components/Navigation/Navigation.jsx';
 import Menu from './Components/Menu/Menu.jsx';
 import Container from './Components/Container/Container.jsx';
 

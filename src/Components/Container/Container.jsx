@@ -24,7 +24,7 @@ const Container = (props) => {
             selectable={props.selectable}/>
         </Tab>
         <Tab eventKey="menu" title="Menu">
-          <Menu />
+          <Menu state={props.state}/>
         </Tab>
         <Tab eventKey="contact" title="Contact Us!">
           <Contact />

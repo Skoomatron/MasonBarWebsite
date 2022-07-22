@@ -4,7 +4,7 @@ const Sandwiches = (props) => {
 
   return (
     <div>
-    <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Sandwiches</h2>
+    <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Gourmet Sandwiches</h2>
     {
       props.sandwiches.map((item, index) => {
         return (

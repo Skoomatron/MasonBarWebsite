@@ -3,7 +3,7 @@ import React from 'react';
 const Taters = (props) => {
   return (
     <div>
-      <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Taters</h2>
+      <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Baked Potatoes</h2>
       {
         props.taters.map((item, index) => {
           return (

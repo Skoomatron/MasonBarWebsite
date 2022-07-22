@@ -3,42 +3,40 @@ const model = require('../Model/index.js');
 const getEvents = (req, res) => {
   model.retrieveEvents()
   .then((success) => {
-    res.status(201).send(success);
+    res.status(200).send(success);
   })
   .catch((error) => {
-    res.status(409).send(error);
+    res.status(500).send(error);
   })
 }
 
 const getImages = (req, res) => {
   model.retrieveImages()
   .then((success) => {
-    res.status(201).send(success);
+    res.status(200).send(success);
   })
   .catch((error) => {
-    res.status(409).send(error);
+    res.status(500).send(error);
   })
 }
 
 const getWelcome = (req, res) => {
   model.retrieveWelcome()
   .then((success) => {
-    console.log(success, 'success in controller')
-    res.status(201).send(success);
+    res.status(200).send(success);
   })
   .catch((error) => {
-    res.status(409).send(error);
+    res.status(500).send(error);
   })
 }
 
 const getMenu = (req, res) => {
   model.retrieveMenu()
   .then((success) => {
-    console.log(success, 'success in controller')
-    res.status(201).send(success);
+    res.status(200).send(success);
   })
   .catch((error) => {
-    res.status(409).send(error);
+    res.status(500).send(error);
   })
 }
 

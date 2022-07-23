@@ -5,6 +5,7 @@ import Events from '../Events/Events.jsx';
 import Welcome from '../Welcome/Welcome.jsx';
 import Menu from '../Menu/Menu.jsx';
 import Contact from '../Contact/Contact.jsx';
+import Sidebar from '../Welcome/Sidebar.jsx';
 
 const Container = (props) => {
 
@@ -17,7 +18,7 @@ const Container = (props) => {
       >
         <Tab eventKey="welcome" title="Welcome">
           <div style={{display: 'flex', flexDirection: 'row'}}>
-            <div className="welcomeSidebar">This is a sidebar</div>
+            <Sidebar state={props.state}/>
             <div className="welcomeContainer">
               <Welcome className="content" state={props.state}/>
             </div>

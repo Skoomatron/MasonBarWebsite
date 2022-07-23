@@ -41,6 +41,7 @@ h1 {
 
 .carouselContainer {
   background-color: white;
+  z-index: 1;
 }
 
 .carouselImage {
@@ -126,7 +127,6 @@ button.rbc-btn {
 /* Welcome Styles */
 
 .welcomeMessage {
-  border: solid 1vh red;
   position: relative;
   text-align: center;
   font-size: 48px;
@@ -134,21 +134,36 @@ button.rbc-btn {
 }
 
 .welcomeSidebar {
-  border: solid 1vh blue;
   height: 100vw;
-  width: 1000px;
+  width: 300px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .welcomeContainer {
-  border: solid 1vh purple;
   width: 100vw;
   height: 100vw;
 }
 
-.carouselImage {
-  width: auto;
+.imageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageMap {
+  position: relative;
+  object-fit: cover;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageMap:hover {
+  z-index: 5;
+  transform: scale(5) translateX(100px);
 }
 
 /* Contact Styles */

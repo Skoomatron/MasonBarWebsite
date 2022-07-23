@@ -126,7 +126,29 @@ button.rbc-btn {
 /* Welcome Styles */
 
 .welcomeMessage {
+  border: solid 1vh red;
+  position: relative;
   text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.welcomeSidebar {
+  border: solid 1vh blue;
+  height: 100vw;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+}
+
+.welcomeContainer {
+  border: solid 1vh purple;
+  width: 100vw;
+  height: 100vw;
+}
+
+.carouselImage {
+  width: auto;
 }
 
 /* Contact Styles */
@@ -181,5 +203,8 @@ button.rbc-btn {
   align-items: center;
   justify-content: center;
   font-weight: bolder;
+}
 
+.menuItemContainer:hover {
+  transform: scale(1.2);
 }

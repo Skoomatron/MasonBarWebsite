@@ -16,7 +16,13 @@ const Container = (props) => {
         fill
       >
         <Tab eventKey="welcome" title="Welcome">
-          <Welcome className="content" state={props.state}/>
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+            <div className="welcomeSidebar">This is a sidebar</div>
+            <div className="welcomeContainer">
+              <Welcome className="content" state={props.state}/>
+            </div>
+
+          </div>
         </Tab>
         <Tab eventKey="event" title="Upcoming Events">
           <Events

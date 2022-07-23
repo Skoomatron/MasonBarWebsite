@@ -3,15 +3,17 @@ import React from 'react';
 const Sandwiches = (props) => {
 
   return (
-    <div>
-    <h2 style={{display: "flex", alignItems: "center", justifyContent: "center"}}>Gourmet Sandwiches</h2>
+    <div className="menuSectionContainer">
+    <h2 className="menuHeader">Gourmet Sandwiches</h2>
     {
       props.sandwiches.map((item, index) => {
         return (
 
-          <div key={item + index} style={{border: 'solid 3px black'}}>
+          <div className="menuItemContainer" key={item + index}>
             {item.name}
-            <div style={{border: 'solid 2px black', width: 'fit-content'}}>{item.description}</div>
+            <br></br>
+            <div className="menuDescription">{item.description}</div>
+            <br></br>
             <div style={{fontStyle: 'italic'}}>{item.price}</div>
           </div>
         )

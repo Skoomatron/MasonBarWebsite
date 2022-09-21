@@ -54,14 +54,24 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: auto;
+  width: fit-content;
+  height: fit-content;
   margin: 0 auto;
   background-size: cover;
+  /* border-radius: 50px; */
+  background: #ffffff;
+  box-shadow:  7px 7px 9px #9c9c9c,
+              -7px -7px 9px #ffffff;
+}
+
+.cImageContainer {
+  height: 40%;
+  position: relative;
+  border: red solid 5px;
 }
 
 .imageCaption {
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,10 +171,10 @@ button.rbc-btn {
   flex-direction: column;
 }
 
-.imageMap:hover {
+/* .imageMap:hover {
   z-index: 5;
   transform: scale(5) translateX(100px);
-}
+} */
 
 /* Contact Styles */
 

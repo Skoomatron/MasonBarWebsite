@@ -8,7 +8,6 @@ const Sandwiches = (props) => {
     {
       props.sandwiches.map((item, index) => {
         return (
-
           <div className="menuItemContainer" key={item + index}>
             {item.name}
             <br></br>
@@ -17,7 +16,6 @@ const Sandwiches = (props) => {
             <div style={{fontStyle: 'italic'}}>{item.price}</div>
           </div>
         )
-
       })
     }
   </div>

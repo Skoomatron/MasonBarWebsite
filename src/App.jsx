@@ -17,6 +17,7 @@ class App extends React.Component {
       showModal: false,
       day: '',
       filtered: {},
+      classToggle: '',
     }
     this.filterEvents = this.filterEvents.bind(this);
     this.selectEvent = this.selectEvent.bind(this);
@@ -36,15 +37,12 @@ class App extends React.Component {
   }
 
   async selectEvent() {
-    console.log(clickedTitle, 'clickedTitle')
     const clickedTitle = event.target.innerHTML;
     if (clickedTitle !== 'Close') {
       this.filterEvents(clickedTitle);
     }
     this.setState({showModal: !this.state.showModal})
     clickedTitle = '';
-    console.log(clickedTitle, 'clicked title after')
-
   }
 
   async getAllData() {

@@ -8,14 +8,12 @@ const Shareables = (props) => {
     {
       props.shareables.map((item, index) => {
         return (
-
           <div className="menuItemContainer" key={item + index} >
             {item.name}
             <div className="menuDescription">{item.description}</div>
             <div style={{fontStyle: 'italic'}}>{item.price}</div>
           </div>
         )
-
       })
     }
   </div>

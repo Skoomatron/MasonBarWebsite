@@ -10,12 +10,14 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development --watch",
     "build-prod": "webpack --mode production",
-    "server": "nodemon src/Server/index.js"
+    "server": "nodemon src/Server/index.js",
+    "serverDeploy": "pm2 src/Server/index.js"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "components": "^0.1.0",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "i": "^0.3.7",
     "moment": "^2.29.4",
     "mongoose": "^6.4.4",

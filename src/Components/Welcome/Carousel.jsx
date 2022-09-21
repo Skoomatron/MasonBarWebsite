@@ -16,7 +16,7 @@ const MainCarousel = (props) => {
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     fade: true,
   }
 
@@ -25,7 +25,7 @@ const MainCarousel = (props) => {
 
       <Slider ref={setSliderRef} {...sliderSettings}>
         {props.state.images.map((card, index) => (
-          <div  key={index}>
+          <div  key={index} className="cImageContainer">
             <p className="imageCaption">{card.photoCaption}</p>
             <img className="carouselImage" src={card.photoURL} width="auto" height="auto" />
           </div>

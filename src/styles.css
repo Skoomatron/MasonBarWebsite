@@ -56,9 +56,10 @@ h1 {
   align-items: center;
   width: fit-content;
   height: fit-content;
-  margin: 0 auto;
+  max-width: 40vw;
+  max-height: 40vw;
+  margin: 2vw auto;
   background-size: cover;
-  /* border-radius: 50px; */
   background: #ffffff;
   box-shadow:  7px 7px 9px #9c9c9c,
               -7px -7px 9px #ffffff;
@@ -67,7 +68,6 @@ h1 {
 .cImageContainer {
   height: 40%;
   position: relative;
-  border: red solid 5px;
 }
 
 .imageCaption {
@@ -146,6 +146,7 @@ button.rbc-btn {
 .welcomeSidebar {
   height: 100vw;
   width: 300px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -170,11 +171,6 @@ button.rbc-btn {
   display: flex;
   flex-direction: column;
 }
-
-/* .imageMap:hover {
-  z-index: 5;
-  transform: scale(5) translateX(100px);
-} */
 
 /* Contact Styles */
 

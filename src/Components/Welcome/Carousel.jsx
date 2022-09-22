@@ -1,13 +1,12 @@
 import React from 'react';
-import Slider from 'react-slick'
-import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
-import {useState} from 'react'
+import Slider from 'react-slick';
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
+import {useState} from 'react';
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const MainCarousel = (props) => {
-
   const [sliderRef, setSliderRef] = useState(null);
 
   const sliderSettings = {
@@ -27,7 +26,7 @@ const MainCarousel = (props) => {
         {props.state.images.map((card, index) => (
           <div  key={index} className="cImageContainer">
             <p className="imageCaption">{card.photoCaption}</p>
-            <img className="carouselImage" src={card.photoURL} width="auto" height="auto" />
+            <img className="carouselImage" src={card.photoURL} />
           </div>
         ))}
       </Slider>

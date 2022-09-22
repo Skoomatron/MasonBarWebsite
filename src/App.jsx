@@ -25,6 +25,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getAllData();
+    console.log("Created by Trevor Edwards - Last Updated (September 22nd, 2022)");
+    console.log("If you're reading this aren't you clever?");
   }
 
   filterEvents(string) {
@@ -72,7 +74,6 @@ class App extends React.Component {
       <div>
         <img className="logo" src={logo} alt="Mason Bar Logo"></img>
         <Container state={this.state} selectable={this.selectEvent} selectable={this.selectEvent}/>
-        <footer className="footer">Authored by Trevor Edwards (Last Updated: July 18th, 2022)</footer>
       </div>
     );
   }
